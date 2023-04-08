@@ -1,18 +1,21 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Simulation</title>
+    <title>ChatGPT Interface</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="email-container">
-        <div class="email-input">
-            <textarea id="niccolo-prompt" rows="5" cols="50"></textarea>
-            <button onclick="submitPrompt()">Submit</button>
+    <div class="container">
+        <div class="email-container">
+            <input type="text" class="email-subject" placeholder="Email Subject">
+            <textarea class="email-body" placeholder="Type your message here..."></textarea>
+            <button class="send-button">Send</button>
         </div>
-        <div class="email-output" id="aim-response">
-            <!-- AIM's responses go here -->
+        <div class="response-container">
+            <p class="response-title">Response:</p>
+            <div class="response-content"></div>
         </div>
     </div>
     <script src="script.js"></script>
