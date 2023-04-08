@@ -1,19 +1,10 @@
-function submitPrompt() {
-    const prompt = document.getElementById('niccolo-prompt');
-    const response = document.getElementById('aim-response');
+document.querySelector(".send-button").addEventListener("click", async () => {
+    const promptText = document.querySelector(".email-body").value;
+    const responseText = await processPrompt(promptText);
+    document.querySelector(".response-content").textContent = responseText;
+});
 
-    // Process the prompt and generate a response using AIM or another chatbot API
-    const aimResponse = processPrompt(prompt.value);
-
-    // Display the response
-    response.innerHTML = aimResponse;
-
-    // Clear the prompt
-    prompt.value = '';
-}
-
-function processPrompt(promptText) {
-    // Add logic here to process the prompt and generate a response using AIM or another chatbot API
-    const responseText = "AIM's response to the given prompt.";
-    return responseText;
+async function processPrompt(promptText) {
+    // Replace this function with a function that sends the prompt to the ChatGPT API and retrieves the response
+    return "This is a placeholder response. You need to replace the processPrompt function with a function that connects to the ChatGPT API.";
 }
